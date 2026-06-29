@@ -1,0 +1,20 @@
+const KAYIT_YETKILI_ROL = '1521110953247379536'; 
+const ROL_FUTBOLCU = '1521111070046027848'; 
+
+const KAYIT_ODASI_ID = '1521111258903085096'; 
+const KAYIT_DUYURU_KANAL_ID = '1521111359977291837'; 
+
+// Hafıza Veritabanları
+let oyuncuVerileri = {}; 
+let davetVerileri = {}; 
+const sunucuDavetleri = new Map();
+let cooldownlar = new Map();
+
+// Sayı Formatlama (Cüzdan gösterimi için)
+function sayiFormatla(sayi) {
+    if (isNaN(sayi)) return "0";
+    if (sayi >= 1000000000) return (sayi / 1000000000).toFixed(1) + "B";
+    if (sayi >= 1000000) return (sayi / 1000000).toFixed(1) + "M";
+    if (sayi >= 1000) return (sayi / 1000).toFixed(1) + "K";
+    return sayi.toString();
+}
