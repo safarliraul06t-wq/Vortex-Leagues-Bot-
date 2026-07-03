@@ -38,7 +38,7 @@ async def on_member_join(member: discord.Member):
     KAYIT_YETKILISI_ROLE_ID = 112233445566778899  # @Kayıt Yetkilisi rol ID'si
     TITANIZM_ROLE_ID = 998877665544332211  # @TİTANİZM rol ID'si
     
-    channel = member.guild.get_channel(KAYIT_KANAL_ID)
+    channel = member.guild.get_channel(1522550831482667048)
     if not channel:
         return
 
@@ -62,7 +62,7 @@ async def on_member_join(member: discord.Member):
     embed.timestamp = discord.utils.utcnow()
 
     # Rol etiketleri içeren düz metin kısmı
-    mention_text = f"📥 Biri geldi kayıt edin <@&{KAYIT_YETKILISI_ROLE_ID}> | <@&{TITANIZM_ROLE_ID}>"
+    mention_text = f"📥 Biri geldi kayıt edin <@&{1522551053604749413}>
 
     # Mesajı embed ve butonla birlikte gönder
     await channel.send(content=mention_text, embed=embed, view=KayitButonu())
